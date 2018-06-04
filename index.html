@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build a Survey Form</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body class="page">
+  <form class="questions">
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q1</p>
+        <h1 class="question__title">
+          What is your name? *</h1>
+      </header>
+
+      <div class="question__content">
+        <input class="text-input text-input--one-third" type="text" name="name" placeholder="Enter your name">
+      </div>
+    </section>
+
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q2</p>
+        <h1 class="question__title">What is your email address? *</h1>
+      </header>
+      <img class="question__image" src="images/venice.jpg">
+      <input class="text-input text-input--two-thirds" type="text" name="email" placeholder="Enter your e-mail address">
+    </section>
+
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q3</p>
+        <h1 class="question__title">How old are you? *</h1>
+      </header>
+      <input class="text-input text-input--one-third" type="text" name="age" placeholder="Enter your age">
+    </section>
+
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q4</p>
+        <h1 class="question__title">What best describes your current role?</h1>
+      </header>
+      <div class="radio-input-group" role="radiogroup">
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="role-student" type="radio" name="role" value="student">
+          <label class="radio-input-group__label" for="role-student" role="radio" tabindex="0" aria-checked="false">Student</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="role-full-time-job" type="radio" name="role" value="full-time-job">
+          <label class="radio-input-group__label" for="role-full-time-job" role="radio" tabindex="-1" aria-checked="false">Full-time job</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="role-full-time-learner" type="radio" name="role" value="full-time-learner">
+          <label class="radio-input-group__label" for="role-full-time-learner" role="radio" tabindex="-1" aria-checked="false">Full-time learner</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="role-prefer-not-to-say" type="radio" name="role" value="prefer-not-to-say">
+          <label class="radio-input-group__label" for="role-prefer-not-to-say" role="radio" tabindex="-1" aria-checked="false">Prefer not to say</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="role-other" type="radio" name="role" value="other">
+          <label class="radio-input-group__label" for="role-other" role="radio" tabindex="-1" aria-checked="false">Other</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q5</p>
+        <h1 class="question__title">How likely is it that you would recommend freeCodeCamp to a friend? *</h1>
+      </header>
+
+      <div class="radio-input-group" role="radiogroup">
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="recommend-definitely" type="radio" name="recommend" value="definitely">
+          <label class="radio-input-group__label" for="recommend-definitely" role="radio" tabindex="0" aria-checked="false">Definitely</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="recommend-maybe" type="radio" name="recommend" value="maybe">
+          <label class="radio-input-group__label" for="recommend-maybe" role="radio" tabindex="-1" aria-checked="false">Maybe</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="recommend-not-sure" type="radio" name="recommend" value="not-sure">
+          <label class="radio-input-group__label" for="recommend-not-sure" role="radio" tabindex="-1" aria-checked="false">Not sure</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q6</p>
+        <h1 class="question__title">What do you most like in freeCodeCamp?</h1>
+      </header>
+
+      <img class="question__image" src="images/code.jpg">
+
+      <div class="radio-input-group" role="radiogroup">
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="like-challenges" type="radio" name="like" value="challenges">
+          <label class="radio-input-group__label" for="like-challenges" role="radio" tabindex="0" aria-checked="false">Challenges</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="like-projects" type="radio" name="like" value="projects">
+          <label class="radio-input-group__label" for="like-projects" role="radio" tabindex="-1" aria-checked="false">Projects</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="like-community" type="radio" name="like" value="community">
+          <label class="radio-input-group__label" for="like-community" role="radio" tabindex="-1" aria-checked="false">Community</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="like-open-source" type="radio" name="like" value="open-source">
+          <label class="radio-input-group__label" for="like-open-source" role="radio" tabindex="-1" aria-checked="false">Open source</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q7</p>
+        <h1 class="question__title">What should freeCodeCamp improve in the future?</h1>
+      </header>
+      <div class="radio-input-group radio-input-group--vertical">
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-front-end-projects" type="checkbox" name="improve" value="front-end-projects">
+          <label class="radio-input-group__label" for="improve-front-end-projects" role="checkbox" tabindex="0">Front-end projects</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-back-end-projects" type="checkbox" name="improve" value="back-end-projects">
+          <label class="radio-input-group__label" for="improve-back-end-projects" role="checkbox" tabindex="0">Back-end projects</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-data-visualization" type="checkbox" name="improve" value="data-visualization">
+          <label class="radio-input-group__label" for="improve-data-visualization" role="checkbox" tabindex="0">Data visualization</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-challenges" type="checkbox" name="improve" value="challenges">
+          <label class="radio-input-group__label" for="improve-challenges" role="checkbox" tabindex="0">Challenges</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-open-source-community" type="checkbox" name="improve" value="open-source-community">
+          <label class="radio-input-group__label" for="improve-open-source-community" role="checkbox" tabindex="0">Open source community</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-gitter-help-rooms" type="checkbox" name="improve" value="gitter-help-rooms">
+          <label class="radio-input-group__label" for="improve-gitter-help-rooms" role="checkbox" tabindex="0">Gitter help rooms</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-videos" type="checkbox" name="improve" value="videos">
+          <label class="radio-input-group__label" for="improve-videos" role="checkbox" tabindex="0">Videos</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-city-meetups" type="checkbox" name="improve" value="city-meetups">
+          <label class="radio-input-group__label" for="improve-city-meetups" role="checkbox" tabindex="0">City meetups</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-wiki" type="checkbox" name="improve" value="wiki">
+          <label class="radio-input-group__label" for="improve-wiki" role="checkbox" tabindex="0">Wiki</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-forum" type="checkbox" name="improve" value="forum">
+          <label class="radio-input-group__label" for="improve-forum" role="checkbox" tabindex="0">Forum</label>
+        </div>
+        <div class="radio-input-group__item">
+          <input class="radio-input-group__field" id="improve-additional-courses" type="checkbox" name="improve" value="additional-courses">
+          <label class="radio-input-group__label" for="improve-additional-courses" role="checkbox" tabindex="0">Additional courses</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="question">
+      <header class="question__header">
+        <p class="question__number">Q8</p>
+        <h1 class="question__title">Do you have any comments or suggestions?</h1>
+      </header>
+      <input class="text-input text-input--full" name="comments" type="text" tabindex="0" placeholder="Enter your comments">
+    </section>
+
+    <section class="questions-submit">
+      <button class="button button--primary" type="submit" tabindex="0">Send survey</button>
+      <a href="https://github.com/nmtmason/build-a-survey-form" class="button button--secondary" tabindex="0">GitHub</a>
+    </section>
+  </form>
+</body>
+
+</html>

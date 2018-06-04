@@ -1,0 +1,14 @@
+{
+  "name": "build-a-survey-form",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "author": "Nicholas Mason <nmt.mason@googlemail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --files index.html css js"
+  }
+}

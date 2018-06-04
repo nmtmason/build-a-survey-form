@@ -1,0 +1,176 @@
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
+    Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(240, 240, 245);
+}
+
+.questions {
+  width: 800px;
+  margin: 64px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+}
+
+.question {
+  border-left: 4px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  padding: 32px 32px;
+}
+
+.question--selected {
+  border-left: 4px solid rgb(50, 100, 245);
+  border-top: 1px solid rgb(220, 220, 220);
+  border-bottom: 1px solid rgb(220, 220, 220);
+  border-radius: 4px 4px 4px 4px;
+  background-color: rgb(245, 245, 245);
+  transition: border 0.25s ease-in-out;
+}
+
+.question > *:not(:first-child) {
+  margin-top: 16px;
+}
+
+.question__header {
+  display: flex;
+  align-items: center;
+}
+
+.question__header > *:not(:first-child) {
+  margin-left: 16px;
+}
+
+.question__number {
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+}
+
+.question__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(50, 50, 50);
+}
+
+.question__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.questions-submit {
+  padding: 32px;
+}
+
+.questions-submit > *:not(:first-child) {
+  margin-left: 8px;
+}
+
+.text-input {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 2px solid rgb(160, 180, 245);
+  padding: 8px 8px 8px 8px;
+  color: rgb(120, 135, 185);
+  outline: none;
+}
+
+.text-input:focus {
+  border-bottom: 2px solid rgb(230, 115, 10);
+}
+
+.text-input--one-third {
+  width: 33.3333%;
+}
+
+.text-input--two-thirds {
+  width: 66.6666%;
+}
+
+.text-input--full {
+  width: 100%;
+}
+
+.radio-input-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-input-group--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-input-group > .radio-input-group__item:not(:first-child) {
+  margin: 0;
+  margin-left: 8px;
+}
+
+.radio-input-group--vertical > .radio-input-group__item:not(:first-child) {
+  margin: 0;
+  margin-top: 8px;
+}
+
+.radio-input-group__label {
+  display: inline-block;
+  border: 1px solid rgb(120, 135, 185);
+  border-radius: 16px;
+  padding: 8px 16px;
+  color: rgb(120, 135, 185);
+  background-color: rgb(255, 255, 255);
+  outline: none;
+}
+
+.radio-input-group__label:focus {
+  border: 1px solid rgb(230, 115, 10);
+  color: rgb(230, 115, 10);
+}
+
+.radio-input-group__field {
+  display: none !important;
+}
+
+.radio-input-group__field:checked + .radio-input-group__label,
+.radio-input-group__field:checked + .radio-input-group__label:focus {
+  background-color: rgb(230, 115, 10);
+  color: rgb(255, 255, 255);
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid rgb(50, 100, 245);
+  border-radius: 24px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+}
+
+.button:hover,
+.button:focus {
+  border: 1px solid rgb(230, 115, 10);
+}
+
+.button--primary {
+  background-color: rgb(50, 100, 245);
+  color: rgb(255, 255, 255);
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: rgb(230, 115, 10);
+  color: rgb(255, 255, 255);
+}
+
+.button--secondary {
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 100, 245);
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: rgb(255, 255, 255);
+  color: rgb(230, 115, 10);
+}
