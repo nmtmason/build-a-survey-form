@@ -4,7 +4,7 @@ Part of the [freecodecamp](https://www.freecodecamp.com) curriculum.
 
 ## Objective
 
-Build a CodePen.io app that is functionally similar to this: https://codepen.io/FreeCodeCamp/full/NNvBQW/.
+Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/VPaoNP.
 
 ## Solution
 
