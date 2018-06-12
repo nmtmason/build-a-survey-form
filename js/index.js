@@ -5,14 +5,19 @@ class QuestionElement {
     this.index = index;
     this.el.addEventListener('click', this.handleClick.bind(this));
     this.el.addEventListener('focusin', this.handleFocusIn.bind(this));
+    this.el.addEventListener('focusout', this.handleFocusOut.bind(this));
   }
 
   handleClick(event) {
-    this.questionGroup.setSelected(this.index);
+    this.questionGroup.select(this.index);
   }
 
   handleFocusIn(event) {
-    this.questionGroup.setSelected(this.index);
+    this.questionGroup.select(this.index);
+  }
+
+  handleFocusOut(event) {
+    this.questionGroup.deselect(this.index);
   }
 }
 
@@ -25,7 +30,7 @@ class QuestionGroup {
     );
   }
 
-  setSelected(index) {
+  select(index) {
     for (let i = 0; i < this.questionElements.length; i++) {
       let el = this.questionElements[i].el;
       if (index === i) {
@@ -34,6 +39,10 @@ class QuestionGroup {
         el.classList.remove(this.selectedClassName);
       }
     }
+  }
+
+  deselect(index) {
+    this.questionElements[index].el.classList.remove(this.selectedClassName);
   }
 }
 
