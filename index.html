@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -7,7 +7,7 @@
   <title>Build a Survey Form</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/index.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body class="page">
@@ -32,7 +32,7 @@
           <label for="email">What is your email address? *</label>
         </h1>
       </header>
-      <img class="question__image" src="images/laptop.jpg">
+      <img class="question__image" src="images/laptop.jpg" alt="">
       <input class="text-input text-input--two-thirds" id="email" type="text" name="email" placeholder="Enter your e-mail address">
     </section>
 
@@ -103,7 +103,7 @@
         <h1 class="question__title">What do you most like in freeCodeCamp?</h1>
       </header>
 
-      <img class="question__image" src="images/code.jpg">
+      <img class="question__image" src="images/code.jpg" alt="">
 
       <div class="radio-input-group" role="radiogroup">
         <div class="radio-input-group__item">
@@ -190,10 +190,10 @@
       <input class="text-input text-input--full" id="comments" name="comments" type="text" tabindex="0" placeholder="Enter your comments">
     </section>
 
-    <section class="questions-submit">
+    <div class="questions-submit">
       <button class="button button--primary" type="submit" tabindex="0">Send survey</button>
       <a href="https://github.com/nmtmason/build-a-survey-form" class="button button--secondary" tabindex="0">GitHub</a>
-    </section>
+    </div>
   </form>
 </body>
 
