@@ -1,7 +1,8 @@
 class QuestionElement {
-  constructor(questionGroup, el, index) {
+  constructor(questionGroup, el, label, index) {
     this.questionGroup = questionGroup;
     this.el = el;
+    this.label = label;
     this.index = index;
     this.el.addEventListener('click', this.handleClick.bind(this));
     this.el.addEventListener('focusin', this.handleFocusIn.bind(this));
@@ -25,8 +26,8 @@ class QuestionGroup {
   constructor(questionElements, selectedClassName) {
     this.selectedClassName = selectedClassName;
     this.questionElements = questionElements.map(
-      (questionElement, index) =>
-        new QuestionElement(this, questionElement, index)
+      ({ question, label }, index) =>
+        new QuestionElement(this, question, label, index)
     );
   }
 
@@ -39,6 +40,7 @@ class QuestionGroup {
         el.classList.remove(this.selectedClassName);
       }
     }
+    this.questionElements[index].label.focus();
   }
 
   deselect(index) {
@@ -198,7 +200,13 @@ class Form {
 
 document.addEventListener('DOMContentLoaded', () => {
   let questions = document.querySelectorAll('.question');
-  new QuestionGroup(Array.from(questions), 'question--selected');
+  new QuestionGroup(
+    Array.from(questions).map(question => {
+      let label = question.querySelector('label');
+      return { question, label };
+    }),
+    'question--selected'
+  );
 
   let radioGroups = document.querySelectorAll('[role="radiogroup"]');
   radioGroups.forEach(

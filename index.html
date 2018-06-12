@@ -16,29 +16,34 @@
       <header class="question__header">
         <p class="question__number">Q1</p>
         <h1 class="question__title">
-          What is your name? *</h1>
+          <label for="name">What is your name? *</label>
+        </h1>
       </header>
 
       <div class="question__content">
-        <input class="text-input text-input--one-third" type="text" name="name" placeholder="Enter your name">
+        <input class="text-input text-input--one-third" id="name" type="text" name="name" placeholder="Enter your name">
       </div>
     </section>
 
     <section class="question">
       <header class="question__header">
         <p class="question__number">Q2</p>
-        <h1 class="question__title">What is your email address? *</h1>
+        <h1 class="question__title">
+          <label for="email">What is your email address? *</label>
+        </h1>
       </header>
       <img class="question__image" src="images/laptop.jpg">
-      <input class="text-input text-input--two-thirds" type="text" name="email" placeholder="Enter your e-mail address">
+      <input class="text-input text-input--two-thirds" id="email" type="text" name="email" placeholder="Enter your e-mail address">
     </section>
 
     <section class="question">
       <header class="question__header">
         <p class="question__number">Q3</p>
-        <h1 class="question__title">How old are you? *</h1>
+        <h1 class="question__title">
+          <label for="age">How old are you? *</label>
+        </h1>
       </header>
-      <input class="text-input text-input--one-third" type="text" name="age" placeholder="Enter your age">
+      <input class="text-input text-input--one-third" id="age" type="text" name="age" placeholder="Enter your age">
     </section>
 
     <section class="question">
@@ -123,7 +128,9 @@
     <section class="question">
       <header class="question__header">
         <p class="question__number">Q7</p>
-        <h1 class="question__title">What should freeCodeCamp improve in the future?</h1>
+        <h1 class="question__title">
+          What should freeCodeCamp improve in the future?
+        </h1>
       </header>
       <div class="radio-input-group radio-input-group--vertical">
         <div class="radio-input-group__item">
@@ -176,9 +183,11 @@
     <section class="question">
       <header class="question__header">
         <p class="question__number">Q8</p>
-        <h1 class="question__title">Do you have any comments or suggestions?</h1>
+        <h1 class="question__title">
+          <label for="comments">Do you have any comments or suggestions?</label>
+        </h1>
       </header>
-      <input class="text-input text-input--full" name="comments" type="text" tabindex="0" placeholder="Enter your comments">
+      <input class="text-input text-input--full" id="comments" name="comments" type="text" tabindex="0" placeholder="Enter your comments">
     </section>
 
     <section class="questions-submit">
