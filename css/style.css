@@ -131,7 +131,11 @@
   display: none !important;
 }
 
-.radio-input-group__field:checked + .radio-input-group__label,
+.radio-input-group__field:checked + .radio-input-group__label {
+  background-color: rgb(120, 135, 185);
+  color: rgb(255, 255, 255);
+}
+
 .radio-input-group__field:checked + .radio-input-group__label:focus {
   background-color: rgb(230, 115, 10);
   color: rgb(255, 255, 255);
