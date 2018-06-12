@@ -29,22 +29,32 @@ class QuestionGroup {
       ({ question, label }, index) =>
         new QuestionElement(this, question, label, index)
     );
+    this.lastSelected = null;
+  }
+
+  deselectAll() {
+    for (let i = 0; i < this.questionElements.length; i++) {
+      let el = this.questionElements[i].el.classList.remove(
+        this.selectedClassName
+      );
+    }
   }
 
   select(index) {
-    for (let i = 0; i < this.questionElements.length; i++) {
-      let el = this.questionElements[i].el;
-      if (index === i) {
-        el.classList.add(this.selectedClassName);
-      } else {
-        el.classList.remove(this.selectedClassName);
-      }
+    if (this.lastSelected === index) {
+      return;
     }
+    this.lastSelected = index;
+    this.deselectAll();
+    this.questionElements[index].el.classList.remove(this.selectedClassName);
     this.questionElements[index].label.focus();
   }
 
   deselect(index) {
-    this.questionElements[index].el.classList.remove(this.selectedClassName);
+    if (this.lastSelected !== index) {
+      return;
+    }
+    this.deselectAll();
   }
 }
 
