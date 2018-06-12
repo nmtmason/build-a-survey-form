@@ -1,8 +1,8 @@
 class QuestionElement {
-  constructor(questionGroup, el, label, index) {
+  constructor(questionGroup, el, labels, index) {
     this.questionGroup = questionGroup;
     this.el = el;
-    this.label = label;
+    this.labels = labels;
     this.index = index;
     this.el.addEventListener('click', this.handleClick.bind(this));
     this.el.addEventListener('focusin', this.handleFocusIn.bind(this));
@@ -26,10 +26,9 @@ class QuestionGroup {
   constructor(questionElements, selectedClassName) {
     this.selectedClassName = selectedClassName;
     this.questionElements = questionElements.map(
-      ({ question, label }, index) =>
-        new QuestionElement(this, question, label, index)
+      ({ question, labels }, index) =>
+        new QuestionElement(this, question, labels, index)
     );
-    this.lastSelected = null;
   }
 
   deselectAll() {
@@ -41,20 +40,17 @@ class QuestionGroup {
   }
 
   select(index) {
-    if (this.lastSelected === index) {
-      return;
-    }
-    this.lastSelected = index;
+    let [firstLabel, ...otherLabels] = this.questionElements[index].labels;
+    let otherLabelHasFocus = otherLabels.includes(document.activeElement);
     this.deselectAll();
-    this.questionElements[index].el.classList.remove(this.selectedClassName);
-    this.questionElements[index].label.focus();
+    this.questionElements[index].el.classList.add(this.selectedClassName);
+    if (!otherLabelHasFocus) {
+      firstLabel.focus();
+    }
   }
 
   deselect(index) {
-    if (this.lastSelected !== index) {
-      return;
-    }
-    this.deselectAll();
+    this.questionElements[index].el.classList.remove(this.selectedClassName);
   }
 }
 
@@ -212,8 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let questions = document.querySelectorAll('.question');
   new QuestionGroup(
     Array.from(questions).map(question => {
-      let label = question.querySelector('label');
-      return { question, label };
+      let labels = Array.from(question.querySelectorAll('label'));
+      return { question, labels };
     }),
     'question--selected'
   );
