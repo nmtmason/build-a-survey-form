@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .page {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
     Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial, sans-serif;
@@ -5,9 +14,13 @@
   background-color: rgb(240, 240, 245);
 }
 
+.container {
+  padding: 32px;
+}
+
 .questions {
+  margin: 32px auto;
   width: 800px;
-  margin: 64px auto;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.2);
   background-color: rgb(255, 255, 255);
@@ -177,4 +190,34 @@
 .button--secondary:focus {
   background-color: rgb(255, 255, 255);
   color: rgb(230, 115, 10);
+}
+
+@media screen and (max-width: 425px) {
+  .text-input--one-third {
+    width: 100%;
+  }
+
+  .text-input--two-thirds {
+    width: 100%;
+  }
+
+  .text-input--full {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .questions {
+    width: 100%;
+  }
+
+  .radio-input-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .radio-input-group > .radio-input-group__item:not(:first-child) {
+    margin: 0;
+    margin-top: 8px;
+  }
 }
